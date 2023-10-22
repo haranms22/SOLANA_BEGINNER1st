@@ -14,30 +14,62 @@
 }
 
 .App-header {
-  background: linear-gradient(to right, #FF6B6B, #794AB4);
+  background: linear-gradient(40deg,#857e99,#94e2f6c7,#56587a);
+  background-size: 180% 180%;
+  animation: gradient-animation 27s ease infinite;
   min-height: 100vh;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
 }
+.div1{
+  width: 50%;
+}
+.div1 img{
+  width: 100px;
+}
+.div2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 100vh;
+  /* background-color: #c9f99b; */
+}
 
+@keyframes gradient-animation {
+  0% {
+    background-position: 0% 80%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 100%;
+  }
+}
 .custom-button {
-  background: linear-gradient(to right, #FF6B6B, #794AB4);
-  border: none;
-  border-radius: 25px;
-  padding: 10px 20px;
+  background-image: linear-gradient(to right, #3c7c7e 0%, #85D8CE  51%, #b43c98  100%);
   margin: 10px;
-  font-size: 16px;
-  color: white;
-  cursor: pointer;
-  transition: background 0.3s ease-in-out;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
 }
 
 .custom-button:hover {
-  background: linear-gradient(to right, #794AB4, #FF6B6B);
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
 }
 
 .App-link {
@@ -52,3 +84,5 @@
     transform: rotate(360deg);
   }
 }
+         
+
